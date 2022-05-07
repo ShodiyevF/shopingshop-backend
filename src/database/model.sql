@@ -22,7 +22,7 @@ drop table if exists orders cascade;
 create table orders(
     order_id int generated always as identity primary key,
     order_gettime timestamp with time zone default current_timestamp,
-    order_address text not null
+    order_address text not null,
     order_count smallint not null,
     products_id int not null references products(products_id)
 );
