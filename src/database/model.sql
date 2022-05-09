@@ -7,7 +7,8 @@ create table users(
     user_name varchar(30) not null,
     user_surname varchar(33) not null,
     user_phone text not null,
-    user_role smallint default 1
+    user_role smallint default 1,
+    user_password text not null
 );
 
 drop table if exists products cascade;
@@ -24,5 +25,6 @@ create table orders(
     order_gettime timestamp with time zone default current_timestamp,
     order_address text not null,
     order_count smallint not null,
-    products_id int not null references products(products_id)
+    products_id int not null references products(products_id),
+    user_id int not null references users(user_id)
 );

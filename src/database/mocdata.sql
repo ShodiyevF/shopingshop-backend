@@ -1,0 +1,1 @@
+insert into users (user_name, user_surname, user_phone, user_role) values ('fayzulloh', 'shodiyev', '998912007435', 2);
